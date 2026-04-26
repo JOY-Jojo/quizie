@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #00003f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+h1 span {
+  background-color: #fff;
+  color: #000;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 90px;
+  background-color: #00003f;
+  box-shadow: #ffffff59 1px 2px 2px 1px;
+  animation: slideFromRight 2s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+nav ul li a:hover {
+  cursor: pointer;
+  color: #007bff;
+}
+.quizie-home {
+  text-align: center;
+  align-content: center;
+  height: 100vh;
+  animation: slideFromLeft 2s ease-in-out;
+}
+.quizie-home span {
+  color: #007bff;
+}
+.quizie-home .p1 {
+  font-size: 18px;
+  font-weight: 250;
+  color: #fff;
+  background-color: rgba(116, 116, 153, 0.247);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border-radius: 20px;
+  justify-self: center;
+}
+.quizie-home h2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.quizie-home p {
+  font-size: 19px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #fff;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+button,
+button a {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  animation: fadeIn 3s ease-in-out;
+}
+.btn2 {
+  border: 2px double #007bff;
+  background-color: #00003f;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 850px) {
+  nav {
+    padding: 15px 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  nav ul {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .quizie-home h2 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+  .quizie-home {
+    padding: 0 20px;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .quiz-div {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizie-home h2 {
+    font-size: 28px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #quiz-ans .btn {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
